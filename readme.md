@@ -16,7 +16,7 @@ In order to use the Grade API, you will need to use an API Token.
 To obtain your token, we are going to make a simple request to the Grade API.
 
 1. Go to https://hoppscotch.io. This is a tool like Postman, which can be used to quickly interact with APIs.
-2. Beside the word GET, replace https://echo.hoppscotch.io/ with https://grade-logging-api.chenpan.ca/signUp.
+2. Beside the word GET, replace https://echo.hoppscotch.io/ with https://ahraz-csc207-s24.up.railway.app/signUp.
 
 Next, we need to specify the username which we want to sign up with. To do this, we add a parameter.
 
@@ -32,7 +32,7 @@ You can also refer to `apiDocuments/signUp.md` in this repo for the documentatio
 
 ***
 
-Alternative to the above: Enter `https://grade-logging-api.chenpan.ca/signUp?utorid=USERNAME` in any web browser
+Alternative to the above: Enter `https://ahraz-csc207-s24.up.railway.app/signUp?utorid=USERNAME` in any web browser
 with `USERNAME` replaced with the username you want to use.
 
 ***
