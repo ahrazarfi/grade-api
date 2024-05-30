@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class MongoGradeDB implements GradeDB {
-    private static final String API_URL = "https://grade-logging-api.chenpan.ca/api/grade";
+    private static final String API_URL = "https://ahraz-csc207-s24.up.railway.app/api/grade";
     // load API_TOKEN from env variable.
     private static final String API_TOKEN = System.getenv("API_TOKEN");
 
@@ -24,7 +24,7 @@ public class MongoGradeDB implements GradeDB {
         OkHttpClient client = new OkHttpClient().newBuilder()
                 .build();
         Request request = new Request.Builder()
-                .url(String.format("https://grade-logging-api.chenpan.ca/grade?course=%s&utorid=%s", course, utorid))
+                .url(String.format("https://ahraz-csc207-s24.up.railway.app/grade?course=%s&utorid=%s", course, utorid))
                 .addHeader("Authorization", API_TOKEN)
                 .addHeader("Content-Type", "application/json")
                 .build();
@@ -60,7 +60,7 @@ public class MongoGradeDB implements GradeDB {
         requestBody.put("grade", grade);
         RequestBody body = RequestBody.create(mediaType, requestBody.toString());
         Request request = new Request.Builder()
-                .url("https://grade-logging-api.chenpan.ca/grade")
+                .url("https://ahraz-csc207-s24.up.railway.app/grade")
                 .method("POST", body)
                 .addHeader("Authorization", API_TOKEN)
                 .addHeader("Content-Type", "application/json")
@@ -91,7 +91,7 @@ public class MongoGradeDB implements GradeDB {
         requestBody.put("name", name);
         RequestBody body = RequestBody.create(mediaType, requestBody.toString());
         Request request = new Request.Builder()
-                .url("https://grade-logging-api.chenpan.ca/team")
+                .url("https://ahraz-csc207-s24.up.railway.app/team")
                 .method("POST", body)
                 .addHeader("Authorization", API_TOKEN)
                 .addHeader("Content-Type", "application/json")
@@ -133,7 +133,7 @@ public class MongoGradeDB implements GradeDB {
         requestBody.put("name", name);
         RequestBody body = RequestBody.create(mediaType, requestBody.toString());
         Request request = new Request.Builder()
-                .url("https://grade-logging-api.chenpan.ca/team")
+                .url("https://ahraz-csc207-s24.up.railway.app/team")
                 .method("PUT", body)
                 .addHeader("Authorization", API_TOKEN)
                 .addHeader("Content-Type", "application/json")
@@ -163,7 +163,7 @@ public class MongoGradeDB implements GradeDB {
         JSONObject requestBody = new JSONObject();
         RequestBody body = RequestBody.create(mediaType, requestBody.toString());
         Request request = new Request.Builder()
-                .url("https://grade-logging-api.chenpan.ca/leaveTeam")
+                .url("https://ahraz-csc207-s24.up.railway.app/leaveTeam")
                 .method("PUT", body)
                 .addHeader("Authorization", API_TOKEN)
                 .addHeader("Content-Type", "application/json")
